@@ -15,6 +15,8 @@ This message shows that your installation appears to be working correctly.
 "@
 
 Write-Host "Add builder"
-docker buildx create --name buildkit-exp --use --driver=remote npipe:////./pipe/buildkitd
+if (-not (docker buildx ls --format "{{.Name}}" | Where-Object { $_ -eq "buildkit-exp" })) { 
+  docker buildx create --name buildkit-exp --use --driver=remote npipe:////./pipe/buildkitd 
+}
 docker buildx inspect
 docker buildx build -t buildkit-sample --load . 
