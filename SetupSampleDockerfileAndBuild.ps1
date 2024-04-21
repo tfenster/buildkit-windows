@@ -1,4 +1,4 @@
-# based on https://gist.github.com/maxkoshevoi/60d7b7910ad6ddcc6e1c9b656a8d0301, https://techcommunity.microsoft.com/t5/containers/getting-started-build-a-basic-hello-world-image-with-buildkit/ba-p/4096154 and https://docs.docker.com/build/buildkit/#buildkit-on-windows
+# based on https://techcommunity.microsoft.com/t5/containers/getting-started-build-a-basic-hello-world-image-with-buildkit/ba-p/4096154 and https://docs.docker.com/build/buildkit/#buildkit-on-windows
 
 Write-Host "Create Dockerfile etc."
 
