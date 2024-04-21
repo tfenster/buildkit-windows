@@ -20,3 +20,6 @@ if (-not (docker buildx ls --format "{{.Name}}" | Where-Object { $_ -eq "buildki
 }
 docker buildx inspect
 docker buildx build -t buildkit-sample --load . 
+
+Write-Host "Run container"
+docker run buildkit-sample
